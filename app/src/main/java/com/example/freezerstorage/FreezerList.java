@@ -1,27 +1,32 @@
 package com.example.freezerstorage;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SearchView;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.View;
-import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+public class FreezerList extends AppCompatActivity {
 
     FreezerViewModel viewModel;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_freezer_list);
 
-    }
-
-    public void freezerList(View view){
-        Intent intent = new Intent(this, FreezerList.class);
-        startActivity(intent);
+        Intent intent = getIntent();
+        RecyclerView recyclerView = findViewById(R.id.recyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setHasFixedSize(true);
+        FridgeAdapter adapter = new FridgeAdapter();
+        recyclerView.setAdapter(adapter);
+        viewModel = new ViewModelProvider(this).get(FreezerViewModel.class);
+        viewModel.getSearchedFreezer().observe(this, adapter::updateList);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
