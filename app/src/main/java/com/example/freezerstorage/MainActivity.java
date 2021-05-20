@@ -1,44 +1,34 @@
 package com.example.freezerstorage;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SearchView;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.View;
-import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.freezerstorage.FreezerContent.Contents;
+import com.example.freezerstorage.FreezerContent.SearchContents;
+import com.example.freezerstorage.FreezerListing.Overview;
+
 
 public class MainActivity extends AppCompatActivity {
 
-    FreezerViewModel viewModel;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
     }
-
+// buttons to get to the 3 main intents
     public void freezerList(View view){
-        Intent intent = new Intent(this, FreezerList.class);
+       Intent intent = new Intent(this, Overview.class);
+       startActivity(intent);
+    }
+    public void contentsList(View view){
+        Intent intent = new Intent(this, Contents.class);
         startActivity(intent);
     }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main_menu, menu);
-        SearchView searchView = (SearchView) menu.findItem(R.id.app_bar_search).getActionView();
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                viewModel.searchFreezer(newText);
-                return false;
-            }
-        });
-        return super.onCreateOptionsMenu(menu);
+    public void searchList(View view){
+        Intent intent = new Intent(this, SearchContents.class);
+        startActivity(intent);
     }
 }

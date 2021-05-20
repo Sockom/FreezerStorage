@@ -3,11 +3,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="bottom"
-    app:menu="@menu/my_navigation_items">
+    tools:context=".FreezerListing.AddFreezer">
 
     <ImageView
         android:id="@+id/imageView"
@@ -17,63 +15,50 @@
         android:src="@drawable/ice"/>
 
     <TextView
-        android:id="@+id/welcometext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
-        android:text="Welcome to Freezer Storage!"
-        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:fontFamily="@font/icefont"/>
+        android:id="@+id/input"
+        android:text="Input Freezername"
+        android:fontFamily="@font/icefont"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:id="@+id/freezernamefield"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input"
+        android:layout_marginTop="16dp"/>
 
     <Button
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:text="Your Freezers"
+        android:text="Add Freezer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/welcometext"
+        app:layout_constraintTop_toBottomOf="@+id/freezernamefield"
         android:layout_marginTop="24dp"
-        android:id="@+id/yourfreezer"
-        android:onClick="freezerList"
+        android:id="@+id/addfreezerbutton"
+        android:onClick="createFreezer"
         android:fontFamily="@font/hanslfont"
         android:textSize="20sp"/>
 
     <Button
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:text="Freezer Content"
+        android:text="Cancel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/yourfreezer"
+        app:layout_constraintTop_toBottomOf="@+id/addfreezerbutton"
         android:layout_marginTop="24dp"
-        android:id="@+id/overview"
-        android:onClick="contentsList"
+        android:id="@+id/cancelcreate"
+        android:onClick="cancel"
         android:fontFamily="@font/hanslfont"
         android:textSize="20sp"/>
-
-    <Button
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:text="Search"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/overview"
-        android:layout_marginTop="24dp"
-        android:id="@+id/search"
-        android:onClick="searchList"
-        android:fontFamily="@font/hanslfont"
-        android:textSize="20sp"/>
-
-    <ImageView
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:src="@drawable/fridge"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/search" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

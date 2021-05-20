@@ -16,28 +16,15 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/freezer_id"
-            android:textSize="24sp"
-            android:layout_width="75dp"
-            android:layout_height="match_parent"
-            android:background="#EFEFEF"
-            android:gravity="center" />
-
-        <TextView
             android:id="@+id/freezer_name"
-            android:textSize="16sp"
+            android:textSize="32sp"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="#F8F8F8"
-            android:gravity="center" />
+            android:gravity="center"
+            android:fontFamily="@font/robotorslabregular" />
 
-        <ImageView
-            android:id="@+id/freezer_image"
-            android:layout_width="75dp"
-            android:layout_margin="4dp"
-            android:layout_height="match_parent"
-            android:gravity="center" />
 
     </LinearLayout>
 

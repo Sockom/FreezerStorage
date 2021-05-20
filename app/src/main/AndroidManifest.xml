@@ -9,11 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FreezerStorage">
-        <activity android:name=".Freezer"></activity>
-        <activity android:name=".FreezerRepository" />
-        <activity android:name=".FreezerViewModel" />
-        <activity android:name=".FreezerList" />
-        <activity android:name=".FridgeAdapter" />
+        <activity android:name=".FreezerListing.AddFreezer" />
+        <activity android:name=".FreezerListing.Overview" />
+        <activity android:name=".FreezerContent.Contents" />
+        <activity android:name=".FreezerContent.AddContents"/>
+        <activity android:name=".FreezerContent.ThisFreezerOverview"/>
+        <activity android:name=".FreezerContent.SearchContents" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
