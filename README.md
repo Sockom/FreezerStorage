@@ -19,13 +19,13 @@ Brugeren skal kunne søge efter ting i fryserne - Implementeret
 Brugeren skal kunne vælge en ting ved søgning der så fortæller hvilken fryser den befinder sig i - Ikke implementeret
 
 C:
-
+kategorisering f.eks kød, grøntsager, færdigretter mm. - ikke implementeret
+stave venlig på dansk ÆØÅ - ikke implementeret
 
 W:
 Brugere for at kunne dele fryser med dem i hustanden for at alle kan slette ting når du tilgår fryseren.
 Rum opdeling i fryseren - ikke implementeret
-kategorisering f.eks kød, grøntsager, færdigretter mm. - ikke implementeret
-Mulighed for at kunne redigere ting i fryseren hvis nu man kun tager en del af noget. f.eks. 1 ud af 5 brød.
+Mulighed for at kunne redigere ting i fryseren hvis nu man kun tager en del af noget. f.eks. 1 ud af 5 brød eller 200g revet ost.
 
 Youtube link:
 
