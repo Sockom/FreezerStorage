@@ -7,10 +7,26 @@ Jeg har i samarbejde med min kæreste fundet på nogle krav der ville gøre en s
 Ideen er at man kan oprette frysere i appen, hvori man tilføjer rum. I disse rum kan man tilføje "items" der kan give et overblik hvad man har. 
 Der skal kunne søges i fryserne om man har en specifik "item" og så vise i hvilket rum denne er.
 
-Krav:
-1 - Brugeren skal kunne vælge hvilke slags fryser skabs/kumme.
-2 - Brugeren skal kunne tilføje antal rum der er i deres fryser.
-3 - Det skal være nemt for brugeren at tilføje og fjerne "items" fra diverse rum.
-4 - Brugeren skal kunne tilføje mere end en fryser.
-5 - Det skal være nemt for brugeren at kunne bruge appen, få knapper, ikke for meget gøjl. Simpelt, enkelt og nemt.
-6 - Søgefunktion så brugeren kan finde specifikke ting nemt.
+MoSCoW
+M:
+Brugeren skal kunne tilføje frysere - Implementeret
+Brugeren skal kunne tilføje ting i fryseren - Implementeret
+Brugeren skal kunne tilgå en liste af alle ting i alle frysere - Implementeret
+
+S:
+Brugeren skal kunne tilgå ting i den enkelte fryser - Implementeret
+Brugeren skal kunne søge efter ting i fryserne - Implementeret
+Brugeren skal kunne vælge en ting ved søgning der så fortæller hvilken fryser den befinder sig i - Ikke implementeret
+
+C:
+
+
+W:
+Brugere for at kunne dele fryser med dem i hustanden for at alle kan slette ting når du tilgår fryseren.
+Rum opdeling i fryseren - ikke implementeret
+kategorisering f.eks kød, grøntsager, færdigretter mm. - ikke implementeret
+Mulighed for at kunne redigere ting i fryseren hvis nu man kun tager en del af noget. f.eks. 1 ud af 5 brød.
+
+Youtube link:
+
+
