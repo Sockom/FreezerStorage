@@ -38,6 +38,7 @@ public class FreezerViewModel extends AndroidViewModel {
         return repository.getFreezer(id);
     }
 
+
     //VM Item methods
     public LiveData<List<Item>> getAllItems() {
         return repository.getAllItems();

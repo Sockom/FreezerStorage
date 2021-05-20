@@ -33,5 +33,4 @@ import java.util.List;
 
         @Query("DELETE FROM freezer_table WHERE id = :id")
         void deleteFreezer(int id);
-
     }

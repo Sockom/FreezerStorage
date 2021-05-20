@@ -2,14 +2,16 @@ package com.example.freezerstorage.FreezerContent;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import androidx.appcompat.widget.SearchView;
+import androidx.lifecycle.MediatorLiveData;
+import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -21,11 +23,12 @@ import com.example.freezerstorage.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class SearchContents extends AppCompatActivity implements ContentAdapter.OnListItemClickListener {
     private FreezerViewModel freezerViewModel;
     private ContentAdapter mContentAdapter;
+    private int id;
+    private String toastMSG;
     SearchView searchView;
 
     @Override
@@ -34,8 +37,8 @@ public class SearchContents extends AppCompatActivity implements ContentAdapter.
         setContentView(R.layout.activity_search);
         Intent intent = getIntent();
         searchView = findViewById(R.id.searchbar);
-
-
+        MutableLiveData<Item> thisItem = new MutableLiveData<>();
+        MutableLiveData<Item> thisFreezer = new MutableLiveData<>();
         // Bottom nav bar stuff
         BottomNavigationView bottomNavigationView = (BottomNavigationView)
                 findViewById(R.id.navigation);
@@ -68,7 +71,6 @@ public class SearchContents extends AppCompatActivity implements ContentAdapter.
 
         });
 
-
         //Sets right nav item as highlighted (I HATE FRAGMENTS!)
         Menu menu = bottomNavigationView.getMenu();
         MenuItem menuItem = menu.getItem(2);
@@ -99,7 +101,9 @@ public class SearchContents extends AppCompatActivity implements ContentAdapter.
 
 
     @Override
-    public void onListItemClick(Item item){
-
+    public void onListItemClick(Item item) {
+        freezerViewModel.cDelete(item);
+        Toast.makeText(this, "Content deleted ", Toast.LENGTH_SHORT).show();
     }
 }
+
