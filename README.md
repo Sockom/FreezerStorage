@@ -28,5 +28,5 @@ Rum opdeling i fryseren - ikke implementeret
 Mulighed for at kunne redigere ting i fryseren hvis nu man kun tager en del af noget. f.eks. 1 ud af 5 brød eller 200g revet ost.
 
 Youtube link:
-
+https://youtu.be/2cdKMV-x3Go
 
